@@ -1,0 +1,518 @@
+#root {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0; /* Removed padding */
+  text-align: center;
+}
+
+/* .logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+} */
+
+.read-the-docs {
+  color: #888;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--unnamed-color-131313); /* Using the background color from Flow 2.css */
+  padding-top: 48px; /* Add padding to account for fixed header */
+}
+
+.header {
+  position: fixed;
+  top: 0px;
+  left: 50%; /* Center the header */
+  transform: translateX(-50%); /* Adjust for centering */
+  width: 1440px; /* Explicitly set width as per original image layout for exact match */
+  max-width: 100%; /* Ensure responsiveness on smaller screens if needed, but prioritize fixed width */
+  height: 48px;
+  background-color: var(--unnamed-color-131313);
+  opacity: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 60px;
+  color: var(--unnamed-color-ffffff);
+  z-index: 100;
+}
+
+.logo {
+  font-family: var(--unnamed-font-family-avenir-next);
+  font-weight: var(--unnamed-font-weight-bold);
+  font-size: var(--unnamed-font-size-24);
+  letter-spacing: var(--unnamed-character-spacing-0);
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 35px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav a {
+  color: var(--unnamed-color-ffffff);
+  text-decoration: none;
+  font-size: var(--unnamed-font-size-16);
+  font-weight: var(--unnamed-font-weight-medium);
+  transition: color 0.3s ease;
+}
+
+.nav a:hover {
+  color: var(--unnamed-color-a49ac4);
+}
+
+.test-button {
+  background: linear-gradient(to right, var(--unnamed-color-ff5c30), var(--unnamed-color-8c3eff)); /* Default: colorful gradient background */
+  color: var(--unnamed-color-ffffff); /* Default: white text */
+  border: none; /* Default: no border */
+  padding: 8px 35px;
+  border-radius: 28px;
+  cursor: pointer;
+  font-weight: var(--unnamed-font-weight-bold);
+  font-size: var(--unnamed-font-size-16);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.test-button:hover {
+  background-color: var(--unnamed-color-131313); /* On hover: black background */
+  background-image: none; /* Remove gradient background on hover */
+  color: var(--unnamed-color-ff5c30); /* Orange text on hover */
+  transform: translateY(-2px);
+  border: none; /* Ensure no conflicting border */
+  box-shadow: 0 0 10px 2px rgba(255, 92, 48, 0.7), /* Reddish glow */
+              0 0 10px 2px rgba(140, 62, 255, 0.7); /* Purplish glow */
+}
+
+.test-button:active {
+  transform: translateY(0);
+  background-color: var(--unnamed-color-131313);
+  background-image: none;
+  color: var(--unnamed-color-ff5c30);
+  border: none;
+  box-shadow: none; /* Remove shadow on active */
+}
+
+.hero-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 80px 60px;
+  flex-grow: 1;
+  gap: 40px;
+}
+
+.hero-content-left {
+  flex: 1;
+  max-width: 600px;
+}
+
+.hero-content-left h1 {
+  font-family: var(--unnamed-font-family-avenir-next);
+  font-size: var(--unnamed-font-size-48);
+  line-height: var(--unnamed-line-spacing-54);
+  margin-bottom: 25px;
+  font-weight: var(--unnamed-font-weight-bold);
+  letter-spacing: var(--unnamed-character-spacing-0);
+}
+
+.hero-content-left p {
+  font-family: var(--unnamed-font-family-avenir-next);
+  font-size: var(--unnamed-font-size-16);
+  line-height: var(--unnamed-line-spacing-24);
+  margin-bottom: 40px;
+  color: var(--unnamed-color-ffffff); /* Using white for now, can be adjusted */
+  font-weight: var(--unnamed-font-weight-medium);
+  letter-spacing: var(--unnamed-character-spacing-0);
+}
+
+.call-to-action-button {
+  background: linear-gradient(to right, var(--unnamed-color-ff5c30), var(--unnamed-color-8c3eff)); /* Same gradient as test button from Flow 2.css */
+  color: var(--unnamed-color-ffffff);
+  border: none;
+  padding: 18px 35px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: var(--unnamed-font-size-20);
+  font-weight: var(--unnamed-font-weight-medium);
+  margin-bottom: 25px;
+  transition: transform 0.2s ease;
+}
+
+.call-to-action-button:hover {
+  transform: translateY(-2px);
+}
+
+.powered-by-text {
+  font-family: var(--unnamed-font-family-avenir-next);
+  font-size: var(--unnamed-font-size-14);
+  color: var(--unnamed-color-a49ac4); /* Using a lighter color for this text */
+  line-height: var(--unnamed-line-spacing-20);
+  font-weight: var(--unnamed-font-weight-medium);
+  letter-spacing: var(--unnamed-character-spacing-0);
+}
+
+.hero-graphic-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  min-height: 500px;
+}
+
+/* Basic shapes for the AI graphic - further enhancement will require images and more complex CSS/SVG */
+.ai-graphic-placeholder {
+  width: 450px;
+  height: 450px;
+  background: transparent; /* Background will be handled by nested elements */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.ai-graphic-placeholder::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, var(--unnamed-color-8c3eff), var(--unnamed-color-ff5c30)); /* Main triangle gradient from Flow 2.css */
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  opacity: 0.8;
+  filter: blur(20px); /* Simulating glow */
+  animation: glowEffect 3s infinite alternate;
+}
+
+.ai-graphic-placeholder::after {
+  content: '';
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  border: 2px solid rgba(255, 255, 255, 0.2); /* Inner circle */
+  border-radius: 50%;
+  animation: pulse 4s infinite ease-in-out;
+}
+
+.ai-text {
+  position: relative;
+  z-index: 2;
+  font-size: 90px;
+  font-weight: var(--unnamed-font-weight-bold);
+  color: var(--unnamed-color-ffffff);
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+/* Animations */
+@keyframes glowEffect {
+  from { filter: blur(20px) brightness(1); }
+  to { filter: blur(30px) brightness(1.2); }
+}
+
+@keyframes pulse {
+  0% { transform: scale(0.9); opacity: 0.5; }
+  50% { transform: scale(1.0); opacity: 0.8; }
+  100% { transform: scale(0.9); opacity: 0.5; }
+}
+
+.client-logos-section {
+  position: relative;
+  height: 200px; /* Adjust height as needed */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  margin-top: 50px; /* Space from the hero section */
+}
+
+.gradient-wave-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, #8c3eff, #d800a6, #ec2e6b, #ff5c30); /* Colors from Flow 2.css */
+  border-radius: 0 0 50% 50% / 0 0 100% 100%; /* Creates the wave effect */
+  transform: translateY(50%); /* Adjust to position the wave correctly */
+  opacity: 0.7;
+  filter: blur(50px); /* Soften the gradient */
+}
+
+.logos-container {
+  position: relative;
+  z-index: 1; /* Ensure logos are above the gradient */
+  display: flex;
+  gap: 80px;
+  align-items: center;
+}
+
+.client-logo {
+  font-family: var(--unnamed-font-family-avenir-next);
+  font-weight: var(--unnamed-font-weight-bold);
+  font-size: var(--unnamed-font-size-24);
+  color: rgba(255, 255, 255, 0.3); /* Semi-transparent white */
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  /* Add outline effect for GRAZ and SPAR if needed */
+}
+
+.automated-section {
+  text-align: center;
+  padding: 100px 60px;
+  background-color: var(--unnamed-color-131313);
+}
+
+.automated-section h2 {
+  font-family: var(--unnamed-font-family-avenir-next);
+  font-size: var(--unnamed-font-size-40);
+  line-height: var(--unnamed-line-spacing-52);
+  font-weight: var(--unnamed-font-weight-bold);
+  color: var(--unnamed-color-ffffff);
+  margin-bottom: 20px;
+}
+
+.automated-section p {
+  font-family: var(--unnamed-font-family-avenir-next);
+  font-size: var(--unnamed-font-size-20);
+  line-height: var(--unnamed-line-spacing-24);
+  font-weight: var(--unnamed-font-weight-medium);
+  color: var(--unnamed-color-a49ac4); /* Lighter grey for this text */
+}
+
+.impact-section {
+  text-align: center;
+  padding: 100px 60px;
+  background-color: var(--unnamed-color-131313);
+}
+
+.impact-section h2 {
+  font-family: var(--unnamed-font-family-avenir-next);
+  font-size: var(--unnamed-font-size-48);
+  line-height: var(--unnamed-line-spacing-54);
+  font-weight: var(--unnamed-font-weight-bold);
+  color: var(--unnamed-color-ffffff);
+  margin-bottom: 50px;
+}
+
+.impact-section h3 {
+  font-family: var(--unnamed-font-family-avenir-next);
+  font-size: var(--unnamed-font-size-24);
+  line-height: var(--unnamed-line-spacing-32);
+  font-weight: var(--unnamed-font-weight-bold);
+  color: var(--unnamed-color-ffffff);
+  margin-bottom: 40px;
+  text-align: left;
+  margin-left: calc((100% - 1440px) / 2 + 60px); /* Adjust based on your header's left padding and width */
+}
+
+.customer-wants-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  max-width: 1440px; /* Align with header width */
+  margin: 0 auto;
+  padding: 0 60px;
+}
+
+.grid-item {
+  background-color: #1e1e1e; /* Slightly lighter dark for the cards */
+  border-radius: 10px;
+  padding: 30px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.grid-item .icon-placeholder {
+  font-size: 40px;
+  color: var(--unnamed-color-8c3eff); /* Purple color for icons */
+  margin-bottom: 10px;
+}
+
+.grid-item p {
+  font-family: var(--unnamed-font-family-avenir-next);
+  font-size: var(--unnamed-font-size-16);
+  line-height: var(--unnamed-line-spacing-24);
+  font-weight: var(--unnamed-font-weight-medium);
+  color: var(--unnamed-color-ffffff);
+}
+
+.footer-container {
+  background-color: #1a1a1a;
+  color: #fff;
+  padding: 40px 0;
+  font-family: Arial, sans-serif;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  flex-wrap: wrap;
+}
+
+.footer-col {
+  flex: 1;
+  min-width: 200px;
+  margin: 20px;
+}
+
+.footer-col h2,
+.footer-col h3 {
+  color: #fff;
+  font-size: 18px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.footer-col h3::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  height: 2px;
+  width: 50px;
+  background: linear-gradient(to right, #ff7e5f, #feb47b);
+}
+
+.footer-admatrica .footer-logo {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.footer-admatrica p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #aaa;
+}
+
+.footer-contact p,
+.footer-sonstiges ul li a {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #aaa;
+  text-decoration: none;
+}
+
+.footer-sonstiges ul {
+  list-style: none;
+  padding: 0;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  border-radius: 50%;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.social-icon:hover {
+  background-color: #555;
+}
+
+.social-icon img {
+  width: 24px;
+  height: 24px;
+}
+
+.certification-logos {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.google-partner-logo,
+.hubspot-logo {
+  width: 100px;
+  height: auto;
+  background-color: transparent; /* Remove placeholder background */
+  display: block; /* Ensure images behave like blocks */
+}
+
+.footer-copyright {
+  text-align: center;
+  padding: 20px;
+  border-top: 1px solid #333;
+  margin-top: 40px;
+  font-size: 12px;
+  color: #aaa;
+}
+
+.footer-floating-buttons {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 1000;
+}
+
+.footer-chat-button,
+.footer-scroll-up-button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: linear-gradient(to right, #ff7e5f, #feb47b); /* Gradient color */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease;
+}
+
+.footer-chat-button:hover,
+.footer-scroll-up-button:hover {
+  transform: scale(1.1);
+}

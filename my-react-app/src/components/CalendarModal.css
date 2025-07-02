@@ -1,0 +1,206 @@
+/* CalendarModal.css */
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7); /* Dark semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: var(--unnamed-color-131313);
+  border-radius: 10px;
+  display: flex;
+  width: 1200px; /* Adjust as per image */
+  height: 600px; /* Adjust as per image */
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.modal-left-panel {
+  flex: 1; /* Takes up one part of the flex space */
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: var(--unnamed-color-ffffff);
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.modal-left-panel .modal-logo {
+  font-family: var(--unnamed-font-family-avenir-next);
+  font-weight: var(--unnamed-font-weight-bold);
+  font-size: var(--unnamed-font-size-24);
+  margin-bottom: 30px;
+}
+
+.modal-left-panel h2 {
+  font-family: var(--unnamed-font-family-avenir-next);
+  font-weight: var(--unnamed-font-weight-bold);
+  font-size: var(--unnamed-font-size-40);
+  line-height: var(--unnamed-line-spacing-52);
+  margin-bottom: 20px;
+}
+
+.modal-left-panel p {
+  font-family: var(--unnamed-font-family-avenir-next);
+  font-weight: var(--unnamed-font-weight-medium);
+  font-size: var(--unnamed-font-size-16);
+  line-height: var(--unnamed-line-spacing-24);
+  color: var(--unnamed-color-a49ac4); /* Lighter grey for description */
+}
+
+.modal-middle-panel {
+  flex: 1.5; /* Takes up more space */
+  padding: 40px;
+  color: var(--unnamed-color-ffffff);
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.calendar-header h3 {
+  font-family: var(--unnamed-font-family-avenir-next);
+  font-weight: var(--unnamed-font-weight-bold);
+  font-size: var(--unnamed-font-size-20);
+  margin: 0;
+}
+
+.calendar-header .nav-arrows span {
+  cursor: pointer;
+  font-size: 24px;
+  margin: 0 10px;
+  color: var(--unnamed-color-a49ac4); /* Lighter grey for arrows */
+}
+
+.calendar-grid-days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  text-align: center;
+  font-family: var(--unnamed-font-family-avenir-next);
+  font-weight: var(--unnamed-font-weight-bold);
+  font-size: var(--unnamed-font-size-14);
+  color: var(--unnamed-color-a49ac4); /* Lighter grey for day names */
+  margin-bottom: 10px;
+}
+
+.calendar-grid-dates {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  text-align: center;
+  font-family: var(--unnamed-font-family-avenir-next);
+  font-weight: var(--unnamed-font-weight-medium);
+  font-size: var(--unnamed-font-size-16);
+}
+
+.calendar-grid-dates .date,
+.calendar-grid-dates .empty {
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  aspect-ratio: 1 / 1; /* Makes them square, so border-radius makes them circles */
+}
+
+.calendar-grid-dates .date:hover:not(.selected-date):not(.active-date) {
+  background-color: rgba(255, 255, 255, 0.1); /* Subtle hover for non-selected/active dates */
+}
+
+.calendar-grid-dates .empty {
+  visibility: hidden;
+}
+
+.calendar-grid-dates .selected-date {
+  background: linear-gradient(to right, var(--unnamed-color-ff5c30), var(--unnamed-color-8c3eff));
+  color: var(--unnamed-color-ffffff);
+}
+
+.calendar-grid-dates .active-date {
+  background-color: rgba(255, 255, 255, 0.05); /* Very subtle background for active dates */
+  color: var(--unnamed-color-ffffff);
+}
+
+.modal-right-panel {
+  flex: 0.8; /* Takes up less space */
+  padding: 40px;
+  color: var(--unnamed-color-ffffff);
+}
+
+.modal-right-panel h4 {
+  font-family: var(--unnamed-font-family-avenir-next);
+  font-weight: var(--unnamed-font-weight-bold);
+  font-size: var(--unnamed-font-size-20);
+  margin-bottom: 30px;
+}
+
+.duration-buttons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.duration-button {
+  background-color: rgba(255, 255, 255, 0.05); /* Subtle dark background */
+  color: var(--unnamed-color-ffffff);
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: var(--unnamed-font-family-avenir-next);
+  font-weight: var(--unnamed-font-weight-medium);
+  font-size: var(--unnamed-font-size-14);
+  transition: all 0.2s ease;
+}
+
+.duration-button:hover:not(.selected) {
+  background-color: rgba(255, 255, 255, 0.1); /* Slightly lighter on hover */
+}
+
+.duration-button.selected {
+  background: linear-gradient(to right, var(--unnamed-color-ff5c30), var(--unnamed-color-8c3eff));
+  color: var(--unnamed-color-ffffff);
+}
+
+.time-slots {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.time-slot {
+  background-color: rgba(255, 255, 255, 0.05);
+  color: var(--unnamed-color-ffffff);
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border */
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: var(--unnamed-font-family-avenir-next);
+  font-weight: var(--unnamed-font-weight-medium);
+  font-size: var(--unnamed-font-size-16);
+  transition: all 0.2s ease;
+  text-align: center;
+}
+
+.time-slot:hover:not(.selected) {
+  background-color: rgba(255, 255, 255, 0.1); /* Slightly lighter on hover */
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.time-slot.selected {
+  background-color: var(--unnamed-color-131313);
+  border-color: var(--unnamed-color-ff5c30); /* Orange border for selected */
+  color: var(--unnamed-color-ff5c30); /* Orange text for selected */
+} 

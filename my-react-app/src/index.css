@@ -1,0 +1,107 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Colors: */
+  --unnamed-color-ff5c30: #FF5C30;
+  --unnamed-color-ec2e6b: #EC2E6B;
+  --unnamed-color-d800a6: #D800A6;
+  --unnamed-color-b21fd3: #B21FD3;
+  --unnamed-color-8c3eff: #8C3EFF;
+  --unnamed-color-a49ac4: #A49AC4;
+  --unnamed-color-131313: #131313;
+  --unnamed-color-ffffff: #FFFFFF;
+
+  /* Font/text values */
+  --unnamed-font-family-avenir-next: 'Avenir Next';
+  --unnamed-font-style-normal: normal;
+  --unnamed-font-weight-medium: 500;
+  --unnamed-font-weight-bold: 700;
+  --unnamed-font-size-10: 10px;
+  --unnamed-font-size-14: 14px;
+  --unnamed-font-size-16: 16px;
+  --unnamed-font-size-20: 20px;
+  --unnamed-font-size-24: 24px;
+  --unnamed-font-size-40: 40px;
+  --unnamed-font-size-48: 48px;
+  --unnamed-character-spacing-0: 0px;
+  --unnamed-line-spacing-16: 16px;
+  --unnamed-line-spacing-20: 20px;
+  --unnamed-line-spacing-24: 24px;
+  --unnamed-line-spacing-32: 32px;
+  --unnamed-line-spacing-52: 52px;
+  --unnamed-line-spacing-54: 54px;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  font-family: var(--unnamed-font-family-avenir-next), sans-serif;
+  background-color: var(--unnamed-color-0d0d0d); /* Adjusted to use a variable or default */
+  color: var(--unnamed-color-ffffff);
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+}
